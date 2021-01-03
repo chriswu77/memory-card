@@ -1,0 +1,63 @@
+@import-normalize;
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.App {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    height: 100px;
+    width: 282px;
+}
+
+.top-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title-text {
+    font-size: 25px;
+    margin: 0;
+    padding: 10px;
+}
+
+.directions {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    border: 1px solid #2d2d2d;
+    border-radius: 3px;
+    width: fit-content;
+    padding: 10px;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.score-line {
+    display: flex;
+}
+
+.score-text {
+    margin: 0;
+    padding: 5px 0;
+}
+
+.score {
+    margin-left: 15px;
+}
+
+.cards-container {
+    display: flex;
+}
