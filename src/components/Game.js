@@ -1,25 +1,27 @@
+/* eslint-disable array-callback-return */
 /* eslint-disable no-plusplus */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import cardsData from '../cardsData';
+import Card from './Card';
 
 const Game = (props) => {
-  const { selectedCards, clickCard } = props;
+  const { selectedCards, clickCard, currentScore, bestScore } = props;
 
   const [deck, setDeck] = useState([]);
 
   const generateRandomOrder = () => {
-    const orderArr = [];
+    let orderArr = [];
     let randomNum;
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 3; i++) {
       randomNum = Math.floor(Math.random() * 16);
       if (!orderArr.includes(randomNum)) {
         orderArr.push(randomNum);
       } else {
-        generateRandomOrder();
+        orderArr = generateRandomOrder();
       }
     }
     if (orderArr.every((index) => selectedCards.includes(index))) {
-      generateRandomOrder();
+      orderArr = generateRandomOrder();
     }
     return orderArr;
   };
@@ -30,13 +32,29 @@ const Game = (props) => {
       cardsData[order[0]],
       cardsData[order[1]],
       cardsData[order[2]],
-      cardsData[order[3]],
     ];
+    setDeck(newDeck);
   };
+
+  useEffect(() => {
+    shuffleDeck();
+  }, []);
+
+  useEffect(() => {
+    shuffleDeck();
+  }, [currentScore, bestScore]);
 
   return (
     <div className="cards-container">
-      {deck.map((card) => console.log(card))}
+      {deck.map((card) => (
+        <Card
+          id={card.id}
+          name={card.name}
+          pic={Object.values(card.pic)}
+          select={clickCard}
+          key={card.id}
+        />
+      ))}
     </div>
   );
 };
