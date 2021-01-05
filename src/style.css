@@ -9,7 +9,7 @@ html {
 }
 
 html, body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .App {
@@ -28,12 +28,14 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 10px;
 }
+
 .title-text {
     font-size: 25px;
     margin: 0;
     padding: 10px;
+    font-weight: 600;
 }
 
 .directions {
@@ -46,17 +48,13 @@ html, body {
     display: flex;
     flex-direction: column;
     align-self: center;
-    /* border: 1px solid #2d2d2d; */
     border: 5px solid #DDC467;
-    /* border-radius: 3px; */
     border-radius: 10px;
-    /* width: fit-content; */
-    width: 353px; 
+    width: 373.2px; 
     height: 177px;
-    /* padding: 10px; */
     padding: 15px 20px;
     font-size: 20px;
-    margin: 20px 0;
+    margin: 30px 0;
     box-sizing: border-box;
     background-color: #342511;
     color: #FFFFFF;
@@ -93,10 +91,12 @@ html, body {
     border: 3px solid #DDC467;
     background-color: #342511;
     border-radius: 10px;
+    animation: fade-in 0.2s;
 }
 
-.card-pic {
-
+.card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .char-name-text {
@@ -106,4 +106,14 @@ html, body {
     margin: 0;
     color: #FFFFFF;
     padding: 10px 0;
+}
+
+@keyframes fade-in {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
