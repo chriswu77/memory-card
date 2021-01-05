@@ -41,7 +41,9 @@ const Game = (props) => {
   }, []);
 
   useEffect(() => {
-    shuffleDeck();
+    if (currentScore < 16) {
+      shuffleDeck();
+    }
   }, [currentScore, bestScore]);
 
   return (

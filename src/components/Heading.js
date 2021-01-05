@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../imgs/logo.jpg';
+import logo from '../imgs/gold_logo.png';
 
 const Heading = () => (
   <div className="top-container">

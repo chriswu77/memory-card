@@ -1,5 +1,5 @@
 /* eslint-disable prefer-destructuring */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
 import Heading from './components/Heading';
 import Scoreboard from './components/Scoreboard';
@@ -18,10 +18,19 @@ function App() {
     return true;
   };
 
+  const checkIfBest = () => {
+    if (currentScore > bestScore) {
+      setBestScore(currentScore);
+    }
+  };
+
+  const resetGame = () => {
+    checkIfBest();
+    setCurrentScore(0);
+    addCard([]);
+  };
+
   const clickCard = (e) => {
-    // click the card
-    // check if the card has been chosen yet, if not push it into the selected card array - update current score - always clear resultsText on success
-    // if repeat card - set best score - reset current score - reset selected cards arr - update game text
     const card = e.target.closest('.card');
     if (card) {
       const id = parseInt(card.id, 10);
@@ -31,13 +40,18 @@ function App() {
         setCurrentScore(currentScore + 1);
         setResultsText('');
       } else {
-        setBestScore(currentScore);
-        setCurrentScore(0);
-        addCard([]);
+        resetGame();
         setResultsText('Sorry, you already picked that card');
       }
     }
   };
+
+  useEffect(() => {
+    if (currentScore === 16) {
+      resetGame();
+      setResultsText('Congratulations, you won!');
+    }
+  }, [currentScore]);
 
   return (
     <div className="App">
