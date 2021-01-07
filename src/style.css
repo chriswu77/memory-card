@@ -97,6 +97,7 @@ html, body {
 .card:hover {
     transform: scale(1.05);
     cursor: pointer;
+    transition: ease-in-out 0.2s;
 }
 
 .char-name-text {
