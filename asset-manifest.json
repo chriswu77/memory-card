@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/memory-card/static/css/main.29435753.chunk.css",
+    "main.css": "/memory-card/static/css/main.59e61783.chunk.css",
     "main.js": "/memory-card/static/js/main.4afcf945.chunk.js",
     "main.js.map": "/memory-card/static/js/main.4afcf945.chunk.js.map",
     "runtime-main.js": "/memory-card/static/js/runtime-main.e60de1de.js",
@@ -8,7 +8,7 @@
     "static/js/2.9467271c.chunk.js": "/memory-card/static/js/2.9467271c.chunk.js",
     "static/js/2.9467271c.chunk.js.map": "/memory-card/static/js/2.9467271c.chunk.js.map",
     "index.html": "/memory-card/index.html",
-    "static/css/main.29435753.chunk.css.map": "/memory-card/static/css/main.29435753.chunk.css.map",
+    "static/css/main.59e61783.chunk.css.map": "/memory-card/static/css/main.59e61783.chunk.css.map",
     "static/js/2.9467271c.chunk.js.LICENSE.txt": "/memory-card/static/js/2.9467271c.chunk.js.LICENSE.txt",
     "static/media/ace.d18401da.png": "/memory-card/static/media/ace.d18401da.png",
     "static/media/blackbeard.2e5e7d37.png": "/memory-card/static/media/blackbeard.2e5e7d37.png",
@@ -32,7 +32,7 @@
   "entrypoints": [
     "static/js/runtime-main.e60de1de.js",
     "static/js/2.9467271c.chunk.js",
-    "static/css/main.29435753.chunk.css",
+    "static/css/main.59e61783.chunk.css",
     "static/js/main.4afcf945.chunk.js"
   ]
 }
